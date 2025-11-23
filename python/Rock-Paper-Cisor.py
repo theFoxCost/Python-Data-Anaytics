@@ -1,29 +1,49 @@
 import random
 
-#make function that make random random  
 
-listOfEmoji = ("📃​", "✂️​", "​🗿​​")
-print(listOfEmoji)
-choice = int(input('Enter Your Choice: '))
+povs = ('paper', 'rock', 'scissor')
+# make a fction that gerate the BOT POV
 
 
-def PCRandomEmoji() :
-    number = int(random.randrange(1,4))
-    imo = listOfEmoji[number]
-    return print(imo)
+rand = random.randrange(0,3)
+botpov = str(povs(rand))
 
-def MyEmoji():
-    print("1. 📃 \n 2.✂️​ \n 3.​🗿​​ ")
+# make a fcntion to let the user enter it opinion
+def userPOV():
+    print("1. paper\n2. rock \n3. scissor")
+    choice = int(input("Enter your Choice"))
     if choice == 1:
-        imo = "📃"
-        print(imo)
+        userPOV = 'paper'
     elif choice == 2:
-        imo = "✂️"
-        print(imo)
+        userPOV = 'rock'
     elif choice == 3:
-        imo = "🗿"
-        print(imo)
+        userPOV = 'scissor'
     else:
-        print("fuck you")
+        print("are you dumb")
     
-MyEmoji()
+    return userPOV
+
+def compareBOTndUSER():
+    if userPOV == botpov:
+        print("DRAW")
+    if userPOV != botpov:
+        if userPOV == "paper" and botpov == "rock":
+            print("HUMAN winns")
+        elif userPOV == "rock" and botpov == "paper":
+            print("BOT winns")
+        elif userPOV == "paper" and botpov == "scissor":
+            print("BOT winns")
+        elif userPOV == "rock" and botpov == "paper":
+            print("BOT winns")
+        elif userPOV == "scissor" and botpov == "Rock":
+            print("BOT winns")
+        elif userPOV == "scissor" and botpov == "Rock":
+            print("BOT winns")
+        elif userPOV == "scissor" and botpov == "Rock":
+            print("BOT winns")
+         
+        
+        
+
+# make a fcntion to let the user knwo the scor
+
