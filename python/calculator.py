@@ -1,7 +1,4 @@
 # calc
-
-
-
 print('1. Addition \n2.Subtraction \n3.Multiplication \n4.Division')
 
 choice = input('Enter Your Choice : ')
